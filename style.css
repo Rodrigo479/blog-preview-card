@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Figtree-Light';
-    src: url('assets/fonts/Figtree-Light.woff') format('woff2'),
-        url('assets/fonts/Figtree-Light.woff2') format('woff');
+    src: url('assets/fonts/Figtree-Light.woff2') format('woff2'),
+        url('assets/fonts/Figtree-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -28,9 +28,9 @@ html {
     font-size: 16px;
 }
 
-h1,
-a,
-span {
+.main__heading,
+.main__author-link,
+.main__eyebrow {
     font-family: 'Figtree-ExtraBold';
 }
 
@@ -40,18 +40,18 @@ time {
 }
 
 h1 {
-    font-size: clamp(1.25rem, 1vw, 1.75rem);
+    font-size: clamp(1.25rem, 1rem + 1.2vw, 1.5rem);
 }
 
 p,
 a {
-    font-size: clamp(1rem, .75vw, 1.25rem);
+    font-size: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
 }
 
 time,
 span,
 .main__date {
-    font-size: clamp(.75rem, .5vw, 1rem);
+    font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.875rem);
 }
 
 a:link,
@@ -118,12 +118,15 @@ body {
     border-radius: 15px;
 }
 
-.main__heading:hover, .main__author-link:hover, .main__heading:focus, .main__author-link:focus {
+.main__heading:hover, .main__author-link:hover, .main__author-link:focus {
     background: hsl(47, 88%, 63%);
     color: white;
     text-shadow: 2px 2px 2px#000000;
+    outline: 1px solid black;
+    padding: 0px 5px;
 }
 
 footer {
     grid-row: 4;
+    margin-top: 10px;
 }
